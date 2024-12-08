@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo-Metry Practice with JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-8" >
+    <header>
+
+    </header>
+    <!-- geometry shape calculation -->
+    <main class="">
+<div class="grid md:grid-flow-col sm:grid-flow-row justify-around">
+    <!-- ALL shapes area -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+        <!-- Triangle Card -->
+        <div class="card card-compact bg-base-100 m-2 p-3 shadow-xl">
+            <figure>
+                <img src="/images/triangle.png" alt="triangle" />
+            </figure>
+            <div class="card-body items-center">
+                <h2 class="card-title">Triangle</h2>
+                <p>Area (A) = 0.5 x b x h</p>
+                <div class="flex items-center gap-2">
+                    <input id="triangle-Base" class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Base (b)">
+                    <span>cm</span>
+                    <input id="triangle-Height" class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Height (h)">
+                    <span>cm</span>
+                </div>
+                <div>
+                    <p id="triangle-result"> Result: Please Calculate</p>
+                </div>
+                <div class="card-actions justify-end w-full pt-3">
+                    <button onclick="triangleAreaCalculate ('triangle-Base','triangle-Height','triangle-result')" class="btn btn-primary w-full">Calculate</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rectangle -->
+        <div class="card card-compact bg-base-100 m-2 p-3 shadow-xl">
+            <figure>
+                <img src="/images/rectangle.png" alt="Rectangle" />
+            </figure>
+            <div class="card-body items-center">
+                <h2 class="card-title">Rectangle</h2>
+                <p>Area (A) = w x l</p>
+                <div class="flex items-center gap-2">
+                    <input id="input1" class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="w">
+                    <span>cm</span>
+                    <input id="input2" class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="l">
+                    <span>cm</span>
+                </div>
+                <div>
+                    <p id="result"> Result: Please Calculate</p>
+                </div>
+                <div class="card-actions justify-end w-full pt-3">
+                    <button onclick="rectangleAreaCalculate('input1', 'input2', 'result')" class="btn btn-primary w-full">Calculate</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+   <!--      Triangle Card -->
+      <!--   <div class="card card-compact bg-base-100 m-2 p-3 shadow-xl">
+            <figure>
+                <img src="/images/triangle.png" alt="triangle" />
+            </figure>
+            <div class="card-body items-center">
+                <h2 class="card-title">Triangle</h2>
+                <p>Area (A) = 0.5 x b x h</p>
+                <div class="flex items-center gap-2">
+                    <input class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Base (b)">
+                    <span>cm</span>
+                    <input class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Height (h)">
+                    <span>cm</span>
+                </div>
+                <div class="card-actions justify-end w-full pt-3">
+                    <button class="btn btn-primary w-full">Calculate</button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Triangle Card -->
+      <!--   <div class="card card-compact bg-base-100 m-2 p-3 shadow-xl">
+            <figure>
+                <img src="/images/triangle.png" alt="triangle" />
+            </figure>
+            <div class="card-body items-center">
+                <h2 class="card-title">Triangle</h2>
+                <p>Area (A) = 0.5 x b x h</p>
+                <div class="flex items-center gap-2">
+                    <input class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Base (b)">
+                    <span>cm</span>
+                    <input class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Height (h)">
+                    <span>cm</span>
+                </div>
+                <div class="card-actions justify-end w-full pt-3">
+                    <button class="btn btn-primary w-full">Calculate</button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Triangle Card -->
+<!--         <div class="card card-compact bg-base-100 m-2 p-3 shadow-xl">
+            <figure>
+                <img src="/images/triangle.png" alt="triangle" />
+            </figure>
+            <div class="card-body items-center">
+                <h2 class="card-title">Triangle</h2>
+                <p>Area (A) = 0.5 x b x h</p>
+                <div class="flex items-center gap-2">
+                    <input class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Base (b)">
+                    <span>cm</span>
+                    <input class="w-20 border border-gray-300 p-1 rounded-md" type="text" placeholder="Height (h)">
+                    <span>cm</span>
+                </div>
+                <div class="card-actions justify-end w-full pt-3">
+                    <button class="btn btn-primary w-full">Calculate</button>
+                </div> -->
+   <!--          </div>
+        </div>
+    </div> -->
+ 
+<!-- Area Calculation -->
+<div id="area-calculation" class="w-96 lg:w-full sm:h-96 h-1/5 border-2 border-green-500 rounded-md p-5">
+    <h3 class="text-lg font-bold mb-4">Area Calculation</h3>
+    <p id="calculation-result" class="text-gray-700">No calculation yet. Enter values and click "Calculate" on a shape
+        card.</p>
+</div>
+
+</div>
+
+    </main>
+    <script src="scripts/calculateResults.js"></script>
+</body>
+</html>
