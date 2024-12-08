@@ -26,7 +26,7 @@ const calculateResult = (input1, input2, result) => {
   const input1Value = document.getElementById(input1).value;
   const input2Value = document.getElementById(input2).value;
   const setResultText = document.getElementById(result);
-  const noticeBoard = document.getElementById("calculation-result");
+  const noticeBoard = document.getElementById("area-calculation");
   return [input1Value, input2Value, setResultText, noticeBoard];
 };
 
